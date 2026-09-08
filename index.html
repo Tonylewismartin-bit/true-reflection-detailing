@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="True Reflection Detailing — premium mobile vehicle detailing across Bourne, Peterborough and surrounding villages. Studio-quality detailing, delivered to your driveway.">
+<meta name="theme-color" content="#111315">
+<title>True Reflection Detailing | Premium Mobile Detailing | Bourne & Peterborough</title>
+
+<!--
+TRUE REFLECTION DETAILING
+Production-ready single-file website blueprint.
+Replace only:
+1. /images/... paths with your own photography
+2. YOUR PHONE NUMBER
+3. YOUR EMAIL ADDRESS
+4. Any service-area wording that does not match your actual operating radius
+
+The CSS is intentionally self-contained so this file can be opened directly
+or used as the visual specification for Wix/Squarespace.
+-->
+
+<style>
+:root{
+  --ink:#111315;
+  --navy:#182331;
+  --navy-2:#0d151f;
+  --paper:#f4f3ef;
+  --white:#fff;
+  --muted:#a9adb2;
+  --gold:#b8a477;
+  --line:rgba(255,255,255,.13);
+  --dark-line:rgba(17,19,21,.12);
+  --max:1180px;
+  --radius:18px;
+  --shadow:0 22px 60px rgba(0,0,0,.18);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:Montserrat,Inter,Arial,sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+.eyebrow{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:.72rem;
+  font-weight:700;
+}
+h1,h2,h3{
+  margin:0 0 18px;
+  font-family:"Playfair Display",Georgia,serif;
+  line-height:1.08;
+  font-weight:500;
+}
+h1{font-size:clamp(3rem,7vw,6.5rem)}
+h2{font-size:clamp(2.2rem,4.5vw,4.1rem)}
+h3{font-size:1.65rem}
+p{margin:0 0 18px}
+.section{padding:105px 0}
+.dark{background:var(--ink);color:var(--white)}
+.navy{background:var(--navy);color:var(--white)}
+.light{background:var(--paper)}
+.center{text-align:center}
+.section-intro{max-width:720px;margin:0 auto 55px}
+.section-intro p{color:#5e6369;font-size:1.05rem}
+.dark .section-intro p,.navy .section-intro p{color:#c3c6c9}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 25px;
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:var(--ink);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.7rem;
+  font-weight:800;
+  transition:transform .25s var(--ease),background .25s,border-color .25s,color .25s;
+}
+.btn:hover{transform:translateY(-2px);background:transparent;color:var(--white)}
+.btn-dark:hover{color:var(--ink)}
+.btn-outline{background:transparent;color:var(--white)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+.btn-light{background:var(--white);border-color:var(--white)}
+.btn-light:hover{background:transparent;color:var(--white)}
+
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .25s,box-shadow .25s;
+}
+.site-header.scrolled{background:rgba(17,19,21,.94);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.nav{
+  min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px;
+}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.logo-mark{
+  width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:1.1rem
+}
+.logo-text{font-size:.76rem;line-height:1.15;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.logo-text small{display:block;color:var(--gold);font-size:.54rem;letter-spacing:.24em;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:27px;color:#fff;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.nav-links a{opacity:.85;transition:opacity .2s;color:#fff}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:1.7rem}
+
+.hero{
+  min-height:100vh;display:grid;align-items:center;position:relative;overflow:hidden;
+  color:#fff;background:
+    linear-gradient(90deg,rgba(8,10,12,.9) 0%,rgba(8,10,12,.67) 46%,rgba(8,10,12,.25) 100%),
+    url("/images/hero-vehicle.jpg") center/cover no-repeat,
+    var(--navy);
+}
+.hero:after{
+  content:"";position:absolute;inset:auto 0 0;height:180px;
+  background:linear-gradient(transparent,var(--ink));pointer-events:none
+}
+.hero-content{position:relative;z-index:2;padding:150px 0 110px;max-width:850px}
+.hero h1{max-width:900px}
+.hero h1 span{color:var(--gold)}
+.hero-copy{max-width:690px;font-size:1.1rem;color:#e5e6e7;margin:25px 0 35px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;color:#d7d8da;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}
+.hero-meta span:before{content:"";display:inline-block;width:5px;height:5px;background:var(--gold);border-radius:50%;margin:0 9px 2px 0}
+
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--dark-line)}
+.value-card{padding:40px;background:var(--paper);min-height:250px}
+.icon{width:42px;height:42px;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;border-radius:50%;font-family:Georgia,serif;margin-bottom:25px}
+.value-card p{color:#646970;font-size:.94rem}
+.value-card h3{font-size:1.45rem}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{
+  background:#fff;border:1px solid var(--dark-line);padding:35px;
+  position:relative;display:flex;flex-direction:column;min-height:470px;
+  transition:transform .3s var(--ease),box-shadow .3s;
+}
+.service-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.service-card.featured{background:var(--navy);color:#fff;border-color:var(--navy)}
+.service-card .price{font-family:"Playfair Display",Georgia,serif;font-size:2.7rem;color:var(--gold);margin:7px 0 20px}
+.service-card .duration{font-size:.67rem;text-transform:uppercase;letter-spacing:.16em;color:#777}
+.service-card.featured .duration{color:#bdc2c7}
+.service-card p{color:#646970}
+.service-card.featured p{color:#c9cdd0}
+.service-card ul{padding:0;margin:5px 0 30px;list-style:none}
+.service-card li{padding:9px 0;border-bottom:1px solid var(--dark-line);font-size:.86rem}
+.service-card.featured li{border-color:var(--line)}
+.service-card li:before{content:"✓";color:var(--gold);font-weight:800;margin-right:10px}
+.card-bottom{margin-top:auto}
+
+.statement{padding:130px 0}
+.statement-inner{max-width:900px}
+.statement h2{font-size:clamp(2.5rem,5vw,5rem)}
+.statement h2 span{color:var(--gold)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:650px}
+.split-image{background:url("/images/detailing-process.jpg") center/cover no-repeat;min-height:500px}
+.split-copy{padding:90px;display:flex;flex-direction:column;justify-content:center}
+.split-copy p{color:#5f6469}
+.checks{list-style:none;padding:0;margin:20px 0 35px}
+.checks li{margin:13px 0;padding-left:28px;position:relative}
+.checks li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
+
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.before-after{position:relative;overflow:hidden;min-height:430px;background:#222}
+.before-after img{width:100%;height:100%;object-fit:cover}
+.ba-label{position:absolute;top:18px;padding:7px 11px;background:rgba(17,19,21,.82);color:#fff;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase}
+.ba-before{left:18px}.ba-after{right:18px}
+.ba-caption{position:absolute;left:0;right:0;bottom:0;padding:55px 25px 20px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff}
+
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{padding:32px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.stars{color:var(--gold);letter-spacing:.2em;margin-bottom:20px}
+.review blockquote{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;line-height:1.35;margin:0 0 22px}
+.review small{color:#aeb2b6;text-transform:uppercase;letter-spacing:.1em;font-size:.62rem}
+
+.area{padding:85px 0}
+.area-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.area-list{display:flex;gap:10px;flex-wrap:wrap}
+.area-list span{border:1px solid var(--line);padding:10px 15px;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}
+
+.page-hero{padding:170px 0 95px;background:var(--ink);color:#fff}
+.page-hero p{max-width:700px;color:#c3c6c9;font-size:1.05rem}
+
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.process-step{padding:42px;border:1px solid var(--dark-line);margin-left:-1px}
+.process-number{font-family:"Playfair Display",Georgia,serif;color:var(--gold);font-size:3rem}
+.process-step p{color:#62676d}
+
+.quote-band{padding:90px 0;background:var(--navy);color:#fff;text-align:center}
+.quote-band h2{max-width:900px;margin:0 auto 28px}
+
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.contact-info{padding-top:15px}
+.contact-item{padding:22px 0;border-bottom:1px solid var(--dark-line)}
+.contact-item strong{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;margin-bottom:5px}
+.contact-item a{font-size:1.05rem}
+.form{background:#fff;padding:38px;border:1px solid var(--dark-line)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.67rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.field input,.field select,.field textarea{
+  width:100%;border:1px solid #d5d8da;background:#fafafa;padding:14px 15px;outline:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{min-height:145px;resize:vertical}
+.form .btn{margin-top:8px}
+.form-note{font-size:.72rem;color:#72777c;margin-top:12px}
+
+.footer{background:#0b0d0f;color:#fff;padding:60px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:45px;padding-bottom:45px}
+.footer p{color:#9ea3a8;max-width:470px}
+.footer h3{font-family:Montserrat,Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;color:var(--gold)}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links li{margin:9px 0;color:#bfc3c6;font-size:.88rem}
+.copyright{border-top:1px solid var(--line);padding-top:22px;color:#747a80;font-size:.7rem;display:flex;justify-content:space-between;gap:20px}
+
+.mobile-book{display:none}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .nav-links.open{
+    display:flex;position:absolute;top:82px;left:0;right:0;background:rgba(17,19,21,.98);
+    flex-direction:column;align-items:stretch;padding:20px
+  }
+  .nav-links.open a{padding:12px}
+  .value-grid,.services-grid,.reviews,.process-grid{grid-template-columns:1fr}
+  .service-card{min-height:auto}
+  .split,.area-grid,.contact-grid{grid-template-columns:1fr}
+  .split-image{min-height:420px}
+  .split-copy{padding:65px 30px}
+  .results-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .mobile-book{
+    display:flex;position:fixed;bottom:15px;left:15px;right:15px;z-index:90;
+    box-shadow:0 12px 30px rgba(0,0,0,.3)
+  }
+  .mobile-book .btn{width:100%}
+  body{padding-bottom:70px}
+}
+@media(max-width:600px){
+  .container{width:min(calc(100% - 28px),var(--max))}
+  .section{padding:75px 0}
+  .hero-content{padding:135px 0 95px}
+  .hero-copy{font-size:1rem}
+  .hero-meta{gap:8px;display:block}
+  .hero-meta span{display:block;margin:8px 0}
+  .form-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .form{padding:24px}
+  .before-after{min-height:330px}
+  .copyright{display:block}
+  .copyright span{display:block;margin-top:8px}
+}
+</style>
+
+<!-- Elegant native/system fallbacks. For Wix/Squarespace, load Playfair Display + Montserrat from the platform font library. -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap');
+</style>
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+ <div class="container nav">
+ <a class="logo" href="#home" aria-label="True Reflection Detailing home">
+ <span class="logo-mark">TR</span>
+ <span class="logo-text">True Reflection<small>Detailing</small></span>
+ </a>
+ <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+ <a href="#home">Home</a>
+ <a href="#services">Services</a>
+ <a href="#why-us">Why Us</a>
+ <a href="#contact">Contact</a>
+ <a class="btn" href="#contact">Book Now</a>
+ </nav>
+ <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+ </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+ <div class="container hero-content">
+ <div class="eyebrow">Premium Mobile Vehicle Detailing</div>
+ <h1>Studio-Quality Detailing.<br><span>Delivered to Your Driveway.</span></h1>
+ <p class="hero-copy">
+      Premium mobile detailing for enthusiasts and discerning vehicle owners across Bourne,
+      Peterborough and the surrounding villages.
+ </p>
+ <p class="hero-copy">
+      We bring our own power, filtered water and professional equipment to deliver a controlled,
+      meticulous detailing experience — without compromising on quality or convenience.
+ </p>
+ <div class="hero-actions">
+ <a class="btn" href="#contact">Book Your Detail</a>
+ <a class="btn btn-outline" href="#services">View Services</a>
+ </div>
+ <div class="hero-meta">
+ <span>Fully self-sufficient</span>
+ <span>Professional equipment</span>
+ <span>Enthusiast-grade detailing</span>
+ </div>
+ </div>
+</section>
+
+<section class="section light">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">The True Reflection Difference</div>
+ <h2>Detailing Without Compromise.</h2>
+ <p>
+        Mobile shouldn't mean basic. We bring the equipment, expertise and attention to detail
+        required to deliver a genuinely premium finish at your property.
+ </p>
+ </div>
+
+ <div class="value-grid">
+ <article class="value-card">
+ <div class="icon">01</div>
+ <h3>Your Water. Your Power. Ours.</h3>
+ <p>We arrive fully self-sufficient with our own power and filtered water, allowing us to work professionally without relying on your household utilities.</p>
+ </article>
+ <article class="value-card">
+ <div class="icon">02</div>
+ <h3>Enthusiast-Grade Techniques</h3>
+ <p>Every vehicle is treated with a methodical, paint-safe approach designed around its condition — not a rushed volume-valeting process.</p>
+ </article>
+ <article class="value-card">
+ <div class="icon">03</div>
+ <h3>Your Driveway. Our Studio.</h3>
+ <p>We bring the detailing operation to you, giving you the convenience of a mobile service while maintaining the standards you'd expect from a professional detailing studio.</p>
+ </article>
+ </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">Our Services</div>
+ <h2>Choose Your Level of Detail.</h2>
+ <p>From regular enthusiast maintenance to intensive interior restoration and paint correction, every service is designed around quality, care and measurable improvement.</p>
+ </div>
+
+ <div class="services-grid">
+ <article class="service-card">
+ <div class="eyebrow">Maintenance</div>
+ <h3>Signature Maintenance Wash</h3>
+ <div class="price">£60</div>
+ <p>Professional maintenance for vehicles that deserve more than a quick wash.</p>
+ <ul>
+ <li>Safe professional hand wash</li>
+ <li>Detailed wheel cleaning</li>
+ <li>Paint sealant / protection</li>
+ <li>Interior vacuum and wipe-down</li>
+ <li>Final visual inspection</li>
+ </ul>
+ <div class="card-bottom"><a class="btn btn-dark" href="#contact">Learn More</a></div>
+ </article>
+
+ <article class="service-card">
+ <div class="eyebrow">Interior</div>
+ <h3>Interior Detailing</h3>
+ <div class="price">£150</div>
+ <div class="duration">2 Hours</div>
+ <p>A deeper interior reset including fabric extraction, leather cleansing and surface protection.</p>
+ <ul>
+ <li>Detailed interior vacuum</li>
+ <li>Fabric and carpet deep cleaning</li>
+ <li>Extraction where appropriate</li>
+ <li>Leather cleansing</li>
+ <li>Interior surface protection</li>
+ </ul>
+ <div class="card-bottom"><a class="btn btn-dark" href="#contact">Learn More</a></div>
+ </article>
+
+ <article class="service-card featured">
+ <div class="eyebrow">Flagship</div>
+ <h3>Ceramic & Paint Correction</h3>
+ <div class="price">£350</div>
+ <p>Machine polishing, paint refinement and long-term protection.</p>
+ <ul>
+ <li>Vehicle condition assessment</li>
+ <li>Thorough preparation & decontamination</li>
+ <li>Machine polishing</li>
+ <li>Swirl / light defect reduction where achievable</li>
+ <li>Nano / ceramic protective coating</li>
+ <li>Aftercare guidance</li>
+ </ul>
+ <div class="card-bottom"><a class="btn" href="#contact">Book This Package</a></div>
+ </article>
+ </div>
+ </div>
+</section>
+
+<section class="statement dark">
+ <div class="container statement-inner">
+ <div class="eyebrow">Our Philosophy</div>
+ <h2>Your Vehicle Isn't Just <span>Another Job.</span></h2>
+ <p>
+      At True Reflection Detailing, we believe your vehicle deserves more than a standard valet.
+      That's why we deliberately take a different approach.
+ </p>
+ <p>
+      We focus on the vehicle in front of us, working methodically to achieve the best possible
+      finish rather than rushing through as many cars as possible.
+ </p>
+ <p>
+      From a carefully maintained daily driver to a cherished performance or luxury vehicle,
+      our goal is simple:
+ </p>
+ <h3>Do the job properly.</h3>
+ </div>
+</section>
+
+<section class="light" id="why-us">
+ <div class="split">
+ <div class="split-image" role="img" aria-label="Professional mobile detailing in progress"></div>
+ <div class="split-copy">
+ <div class="eyebrow">Why True Reflection</div>
+ <h2>Mobile Doesn't Mean Basic.</h2>
+ <p>
+        We bring professional equipment, our own power and filtered water directly to your property
+        and focus on delivering the best possible result for the vehicle in front of us.
+ </p>
+ <ul class="checks">
+ <li><strong>Self-sufficient.</strong> We bring our own power and filtered water.</li>
+ <li><strong>Quality over speed.</strong> Controlled, careful workmanship comes first.</li>
+ <li><strong>Enthusiast mindset.</strong> We understand why finish and protection matter.</li>
+ <li><strong>Personal service.</strong> One specialist, one vehicle, one clear standard.</li>
+ </ul>
+ <a class="btn btn-dark" href="#contact">Discuss Your Vehicle</a>
+ </div>
+ </div>
+</section>
+
+<section class="section navy">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">The Process</div>
+ <h2>Quality Is Built Into The Process.</h2>
+ <p>Every service follows a deliberate workflow designed to protect the vehicle and verify the finished result.</p>
+ </div>
+
+ <div class="process-grid">
+ <article class="process-step">
+ <div class="process-number">01</div>
+ <h3>Decontamination</h3>
+ <p><strong>Prepare before we correct.</strong> We carefully clean and decontaminate relevant surfaces to establish the right foundation for the work that follows.</p>
+ </article>
+ <article class="process-step">
+ <div class="process-number">02</div>
+ <h3>Precision Execution</h3>
+ <p><strong>Detail with purpose.</strong> We work methodically using appropriate products, tools and techniques for the vehicle and surface being treated.</p>
+ </article>
+ <article class="process-step">
+ <div class="process-number">03</div>
+ <h3>Multi-Angle Inspection</h3>
+ <p><strong>Inspect before we hand over.</strong> The finished vehicle is checked from multiple angles and under appropriate lighting before the service is considered complete.</p>
+ </article>
+ </div>
+ </div>
+</section>
+
+<section class="section light">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">Real Results</div>
+ <h2>See The Difference.</h2>
+ <p>Professional detailing should be visible. Replace these image paths with your own genuine before-and-after photography.</p>
+ </div>
+
+ <div class="results-grid">
+ <div class="before-after">
+ <img src="/images/before-paint.jpg" alt="Vehicle paint before correction">
+ <span class="ba-label ba-before">Before</span>
+ <div class="ba-caption"><strong>Paint correction</strong><br>Swirl and defect reduction.</div>
+ </div>
+ <div class="before-after">
+ <img src="/images/after-paint.jpg" alt="Vehicle paint after correction">
+ <span class="ba-label ba-after">After</span>
+ <div class="ba-caption"><strong>Refined finish</strong><br>Clarity, gloss and protection.</div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<section class="section dark">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">Customer Experience</div>
+ <h2>The Finish Speaks For Itself.</h2>
+ <p>Use genuine customer feedback here. Never publish invented reviews.</p>
+ </div>
+
+ <div class="reviews">
+ <article class="review">
+ <div class="stars">★★★★★</div>
+ <blockquote>“Add your genuine customer review here — ideally describing the service, finish and overall experience.”</blockquote>
+ <small>Customer Name · Vehicle · Bourne</small>
+ </article>
+ <article class="review">
+ <div class="stars">★★★★★</div>
+ <blockquote>“Add your genuine customer review here — ideally describing the attention to detail and convenience.”</blockquote>
+ <small>Customer Name · Vehicle · Peterborough</small>
+ </article>
+ <article class="review">
+ <div class="stars">★★★★★</div>
+ <blockquote>“Add your genuine customer review here — ideally describing the transformation and professionalism.”</blockquote>
+ <small>Customer Name · Vehicle · Surrounding Village</small>
+ </article>
+ </div>
+ </div>
+</section>
+
+<section class="area navy">
+ <div class="container area-grid">
+ <div>
+ <div class="eyebrow">Service Area</div>
+ <h2>Premium Detailing Across Bourne & Peterborough.</h2>
+ <p>True Reflection Detailing brings premium mobile vehicle care directly to your property. We serve Bourne, Peterborough and surrounding local villages.</p>
+ </div>
+ <div class="area-list">
+ <span>Bourne</span><span>Peterborough</span><span>Market Deeping</span><span>Surrounding villages</span>
+ </div>
+ </div>
+</section>
+
+<section class="quote-band">
+ <div class="container">
+ <h2>Ready To See Your Vehicle Differently?</h2>
+ <p>Whether you're looking for regular maintenance or a complete paint transformation, let's discuss what your vehicle actually needs.</p>
+ <a class="btn" href="#contact">Book Your Detail</a>
+ </div>
+</section>
+
+<!-- SERVICES PAGE MODULE -->
+<section class="page-hero" id="services-detail">
+ <div class="container">
+ <div class="eyebrow">Services & Pricing</div>
+ <h1>Premium Detailing.<br>Without The Rush.</h1>
+ <p>
+      Our services aren't designed around processing as many vehicles as possible. Each package is
+      structured to give your vehicle the time, preparation and attention required to achieve a properly detailed finish.
+ </p>
+ </div>
+</section>
+
+<section class="section light">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">01 · Signature Maintenance</div>
+ <h2>£60</h2>
+ <p>Professional maintenance for vehicles that are already being looked after.</p>
+ </div>
+ <div class="service-card" style="max-width:850px;margin:auto">
+ <h3>What's Included</h3>
+ <ul>
+ <li>Safe professional hand wash</li>
+ <li>Thorough exterior rinse and preparation</li>
+ <li>Detailed wheel cleaning</li>
+ <li>Tyre cleaning</li>
+ <li>Safe paint-safe drying process</li>
+ <li>Paint sealant / protection</li>
+ <li>Interior vacuum</li>
+ <li>Interior surface wipe-down</li>
+ <li>Interior glass cleaning</li>
+ <li>Final visual inspection</li>
+ </ul>
+ <p><strong>Ideal for:</strong> Enthusiasts and vehicle owners who want to maintain a clean, protected finish regularly rather than relying on occasional deep cleans.</p>
+ <a class="btn btn-dark" href="#contact">Book This Package</a>
+ </div>
+ </div>
+</section>
+
+<section class="section navy">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">02 · Interior Detailing</div>
+ <h2>£150 · 2 Hours</h2>
+ <p>A dedicated interior reset for vehicles that need more than a routine valet.</p>
+ </div>
+ <div class="service-card" style="max-width:850px;margin:auto;background:#fff;color:var(--ink)">
+ <h3>What's Included</h3>
+ <ul>
+ <li>Detailed interior vacuum</li>
+ <li>Fabric and carpet deep cleaning</li>
+ <li>Fabric extraction where appropriate</li>
+ <li>Leather cleansing</li>
+ <li>Detailed cleaning of interior surfaces</li>
+ <li>Dash, console and trim detailing</li>
+ <li>Door cards and hard-to-reach areas</li>
+ <li>Interior glass cleaning</li>
+ <li>Appropriate surface protection</li>
+ <li>Final inspection</li>
+ </ul>
+ <p><strong>Ideal for:</strong> Owners who want to restore the condition and presentation of their interior rather than simply have it vacuumed and wiped down.</p>
+ <a class="btn btn-dark" href="#contact">Book This Package</a>
+ </div>
+ </div>
+</section>
+
+<section class="section light">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">03 · Flagship Service</div>
+ <h2>Ceramic & Paint Correction · £350</h2>
+ <p>Machine polishing, paint refinement and long-term protection.</p>
+ </div>
+ <div class="service-card featured" style="max-width:850px;margin:auto">
+ <h3>What's Included</h3>
+ <ul>
+ <li>Vehicle condition assessment</li>
+ <li>Thorough exterior preparation</li>
+ <li>Safe wash and decontamination</li>
+ <li>Paint contamination removal</li>
+ <li>Machine polishing</li>
+ <li>Swirl and light defect reduction where achievable</li>
+ <li>Paint refinement and gloss enhancement</li>
+ <li>Panel-by-panel inspection</li>
+ <li>Nano / ceramic protective coating</li>
+ <li>Final inspection and handover</li>
+ <li>Aftercare guidance</li>
+ </ul>
+ <p><strong>Ideal for:</strong> Enthusiasts, luxury vehicle owners and anyone who wants to significantly improve the appearance and protection of their vehicle rather than simply add temporary shine.</p>
+ <a class="btn" href="#contact">Book This Package</a>
+ </div>
+ </div>
+</section>
+
+<section class="quote-band">
+ <div class="container">
+ <h2>Not Sure Which Service You Need?</h2>
+ <p>Tell us what you'd like to achieve and we'll recommend the most appropriate service for your vehicle.</p>
+ <a class="btn" href="#contact">Request A Vehicle Assessment</a>
+ </div>
+</section>
+
+<!-- ABOUT PAGE MODULE -->
+<section class="page-hero">
+ <div class="container">
+ <div class="eyebrow">Why Us · About</div>
+ <h1>We Don't Believe<br>Mobile Should Mean Basic.</h1>
+ <p>True Reflection Detailing brings a studio-quality approach directly to your driveway.</p>
+ </div>
+</section>
+
+<section class="section light">
+ <div class="container" style="max-width:900px">
+ <div class="eyebrow">Our Story</div>
+ <h2>Detailing With A Different Standard.</h2>
+ <p>
+      True Reflection Detailing was built around a simple idea: you shouldn't have to choose between premium workmanship and convenience.
+ </p>
+ <p>
+      We understand that for many vehicle owners, their car is more than simply transport. It might be a performance car, a luxury vehicle, a carefully maintained daily driver or something you've spent considerable time and money making your own.
+ </p>
+ <p><strong>That deserves a different level of care.</strong></p>
+ <p>
+      Instead of relying on a high-volume model, we take a more considered approach. We bring professional equipment, our own power and filtered water directly to your property and focus on delivering the best possible result for the vehicle in front of us.
+ </p>
+ <p>Mobile detailing isn't about doing less.</p>
+ <h3>It's about bringing the right standard of detailing to you.</h3>
+ </div>
+</section>
+
+<section class="section navy">
+ <div class="container">
+ <div class="section-intro center">
+ <div class="eyebrow">Process & Standards</div>
+ <h2>Three Steps. One Standard.</h2>
+ </div>
+ <div class="process-grid">
+ <article class="process-step">
+ <div class="process-number">01</div>
+ <h3>Decontamination</h3>
+ <p>Prepare before we correct. Surfaces are carefully cleaned and decontaminated as appropriate for the service.</p>
+ </article>
+ <article class="process-step">
+ <div class="process-number">02</div>
+ <h3>Precision Execution</h3>
+ <p>Detail with purpose. We select the appropriate process, products and tools for the vehicle and surface.</p>
+ </article>
+ <article class="process-step">
+ <div class="process-number">03</div>
+ <h3>Multi-Angle Inspection</h3>
+ <p>Inspect before handover. We check the finished vehicle from multiple angles and under appropriate lighting.</p>
+ </article>
+ </div>
+ </div>
+</section>
+
+<!-- CONTACT PAGE MODULE -->
+<section class="page-hero" id="contact">
+ <div class="container">
+ <div class="eyebrow">Contact & Booking</div>
+ <h1>Let's Talk About<br>Your Vehicle.</h1>
+ <p>Tell us what you'd like to achieve and where you're located. We'll recommend the most appropriate service and arrange a suitable appointment.</p>
+ </div>
+</section>
+
+<section class="section light">
+ <div class="container contact-grid">
+ <div class="contact-info">
+ <div class="eyebrow">Direct Contact</div>
+ <h2>Start A Conversation.</h2>
+ <p>For booking enquiries, vehicle information or advice on which service is right for you, get in touch directly.</p>
+
+ <div class="contact-item">
+ <strong>Phone</strong>
+ <a href="tel:YOURPHONENUMBER">YOUR PHONE NUMBER</a>
+ </div>
+ <div class="contact-item">
+ <strong>Email</strong>
+ <a href="mailto:YOUREMAIL@example.co.uk">YOUR EMAIL ADDRESS</a>
+ </div>
+ <div class="contact-item">
+ <strong>Service Area</strong>
+ <span>Bourne, Peterborough and surrounding local villages.</span>
+ </div>
+ </div>
+
+ <form class="form" action="#" method="post">
+ <div class="eyebrow">Booking Enquiry</div>
+ <h3>Request A Booking.</h3>
+ <div class="form-grid">
+ <div class="field">
+ <label for="name">Your Name</label>
+ <input id="name" name="name" type="text" placeholder="Your full name" required>
+ </div>
+ <div class="field">
+ <label for="location">Location</label>
+ <input id="location" name="location" type="text" placeholder="Bourne / Peterborough / Village" required>
+ </div>
+ <div class="field">
+ <label for="vehicle">Vehicle Make & Model</label>
+ <input id="vehicle" name="vehicle" type="text" placeholder="e.g. BMW M4" required>
+ </div>
+ <div class="field">
+ <label for="service">Service Desired</label>
+ <select id="service" name="service" required>
+ <option value="">Select a service</option>
+ <option>Signature Maintenance Wash – £60</option>
+ <option>Interior Detailing – £150</option>
+ <option>Ceramic & Paint Correction – £350</option>
+ <option>Not sure – I'd like a recommendation</option>
+ </select>
+ </div>
+ <div class="field">
+ <label for="date">Preferred Date</label>
+ <input id="date" name="date" type="date">
+ </div>
+ <div class="field full">
+ <label for="message">Tell Us About Your Vehicle</label>
+ <textarea id="message" name="message" placeholder="Tell us what you'd like us to achieve, the vehicle's current condition, or any particular areas you'd like us to focus on."></textarea>
+ </div>
+ <div class="field full">
+ <label for="photos">Vehicle Photos</label>
+ <input id="photos" name="photos" type="file" accept="image/*" multiple>
+ </div>
+ </div>
+ <button class="btn btn-dark" type="submit">Request A Booking</button>
+ <p class="form-note">We'll review your enquiry and respond with availability and any information needed before confirming your appointment.</p>
+ </form>
+ </div>
+</section>
+
+</main>
+
+<footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div>
+ <a class="logo" href="#home">
+ <span class="logo-mark">TR</span>
+ <span class="logo-text">True Reflection<small>Detailing</small></span>
+ </a>
+ <p style="margin-top:20px">Studio-quality detailing, delivered to your driveway. Premium mobile vehicle care across Bourne, Peterborough and surrounding villages.</p>
+ </div>
+ <div>
+ <h3>Navigation</h3>
+ <ul class="footer-links">
+ <li><a href="#home">Home</a></li>
+ <li><a href="#services">Services & Pricing</a></li>
+ <li><a href="#why-us">Why Us</a></li>
+ <li><a href="#contact">Contact & Booking</a></li>
+ </ul>
+ </div>
+ <div>
+ <h3>Services</h3>
+ <ul class="footer-links">
+ <li>Signature Maintenance · £60</li>
+ <li>Interior Detailing · £150</li>
+ <li>Ceramic & Paint Correction · £350</li>
+ </ul>
+ </div>
+ </div>
+ <div class="copyright">
+ <span>© <span id="year"></span> True Reflection Detailing. All rights reserved.</span>
+ <span>Bourne · Peterborough · Surrounding Villages</span>
+ </div>
+ </div>
+</footer>
+
+<div class="mobile-book">
+ <a class="btn" href="#contact">Book Your Detail</a>
+</div>
+
+<script>
+const header = document.getElementById('siteHeader');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 30);
+});
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('#navLinks a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

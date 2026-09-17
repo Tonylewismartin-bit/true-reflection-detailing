@@ -118,7 +118,8 @@ url("Aston Martin front page logo.jpg") center/cover no-repeat,#07090a}
 /* Services */
 .services-intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center;margin-bottom:55px}
 .services-intro-copy p{color:#5f6469;max-width:580px}
-.services-image{min-height:400px;border-radius:12px;background:url("paint condition.png") center/cover no-repeat; background-color:#e8e6df;box-shadow:var(--shadow)}
+.services-image{min-height:400px;border-radius:12px;overflow:hidden;background:#e8e6df;box-shadow:var(--shadow)}
+.services-image img{width:100%;height:100%;min-height:400px;display:block;object-fit:cover}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .service-card{background:#fff;border:1px solid var(--dark-line);padding:32px;position:relative;display:flex;flex-direction:column;min-height:450px;transition:.3s var(--ease)}
 .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
@@ -270,7 +271,9 @@ url("Aston Martin front page logo.jpg") center/cover no-repeat,#07090a}
         <p>From maintenance washes and interior detailing to machine polishing, paint correction and ceramic coating, every service is built around the condition of your vehicle and the result you want to achieve.</p>
         <a class="btn btn-dark" href="#service-list">Explore Our Services&nbsp; →</a>
       </div>
-      <div class="services-image" role="img" aria-label="Professional vehicle paint inspection during mobile car detailing"></div>
+     <div class="services-image">
+  <img src="paint%20condition.png" alt="Professional vehicle paint inspection during mobile car detailing" loading="lazy">
+</div>
     </div>
 
     <div class="services-grid" id="service-list">

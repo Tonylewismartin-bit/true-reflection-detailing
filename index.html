@@ -426,7 +426,7 @@ input[type="file"]::file-selector-button {
           </div>
           <div class="field"><label for="date">Preferred Date</label><input id="date" name="date" type="date"></div>
           <div class="field full"><label for="message">Tell Us About Your Vehicle</label><textarea id="message" name="message" placeholder="Tell us what you'd like us to achieve, the vehicle's current condition, or any particular areas you'd like us to focus on."></textarea></div>
-          <div class="field full"><label for="photos">Vehicle Photos</label><input id="photos" name="photos" type="file" accept="image/*" multiple></div>
+         <div class="field full"><label for="photos">Vehicle Photos</label><input id="photos" name="photos" type="file" accept="image/*" multiple><span id="photoFileName" style="color:#000;font-size:14px;margin-top:8px;">No photo selected</span></div>
         </div>
         <button class="btn btn-dark" type="submit">Request Your Booking</button>
         <p class="form-note">We'll review your enquiry and respond with availability and any information needed before confirming your appointment.</p>
@@ -474,5 +474,18 @@ document.querySelectorAll('#navLinks a').forEach(link=>link.addEventListener('cl
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 <script src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
+<script>
+document.getElementById('photos').addEventListener('change', function () {
+    const display = document.getElementById('photoFileName');
+
+    if (this.files.length === 0) {
+        display.textContent = 'No photo selected';
+    } else if (this.files.length === 1) {
+        display.textContent = this.files[0].name;
+    } else {
+        display.textContent = this.files.length + ' photos selected';
+    }
+});
+</script>  
 </body>
 </html>

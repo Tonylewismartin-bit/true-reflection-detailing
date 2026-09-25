@@ -31,7 +31,6 @@
       "@id": "https://www.truereflectiondetailing.co.uk/#business",
       "name": "True Reflection Detailing",
       "url": "https://www.truereflectiondetailing.co.uk/",
-      "telephone": "+447734735473",
       "email": "enquiries@truereflectiondetailing.co.uk",
       "areaServed": [
         "Bourne",
@@ -218,10 +217,10 @@ p{margin:0 0 18px}
 .service-summary h3{font-size:1.45rem;margin:0 0 9px}
 .service-summary p{color:#5f6469;font-size:.88rem;line-height:1.65;margin:0}
 .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.service-card{background:#fff;border:1px solid var(--dark-line);padding:32px;position:relative;display:flex;flex-direction:column;min-height:450px;transition:.3s var(--ease)}
+.service-card{background:#fff;border:1px solid var(--dark-line);padding:32px;position:relative;display:flex;flex-direction:column;min-height:360px;transition:.3s var(--ease)}
 .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .service-card.featured{background:var(--ink);color:#fff;border-color:var(--ink)}
-.service-card .price{font-family:"Playfair Display",Georgia,serif;font-size:2.5rem;color:var(--gold);margin:6px 0 15px}
+.service-card .price{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.55rem,3vw,2.5rem);color:var(--gold);margin:6px 0 15px}
 .duration{font-size:.66rem;text-transform:uppercase;letter-spacing:.15em;color:#777}
 .featured .duration{color:#bdc2c7}
 .service-card p{color:#646970;font-size:.9rem}
@@ -367,7 +366,7 @@ input[type="file"]::file-selector-button {
   <div class="container hero-content">
     <h1 class="hero-reveal hero-reveal-1">Mobile Car Detailing in <span>Bourne &amp; Peterborough.</span></h1>
     <div class="hero-subtitle hero-reveal hero-reveal-2">Premium Detailing, Delivered to Your Driveway.</div>
-    <p class="hero-copy hero-reveal hero-reveal-3">True Reflection Detailing brings professional mobile car detailing and valeting to your home or workplace in Bourne, Peterborough and surrounding areas. From a thorough interior clean to paint correction and ceramic coating, we recommend care to suit your vehicle.</p>
+    <p class="hero-copy hero-reveal hero-reveal-3">Mobile valeting, interior deep cleaning, paint correction and ceramic coating at your home or workplace. Choose the service that fits your vehicle below.</p>
     <div class="hero-actions hero-reveal hero-reveal-4">
       <a class="btn" href="#services">View Our Services&nbsp; →</a>
       <a class="btn btn-outline" href="#contact">Book Now&nbsp; →</a>
@@ -375,37 +374,12 @@ input[type="file"]::file-selector-button {
   </div>
 </section>
 
-<section class="feature-strip" aria-label="True Reflection service benefits">
-  <div class="container feature-grid">
-    <div class="feature"><div class="feature-number">01</div><strong>Premium Results</strong><p>Studio-quality attention to detail</p></div>
-    <div class="feature"><div class="feature-number">02</div><strong>Fully Self-Sufficient</strong><p>Our own power and filtered water</p></div>
-    <div class="feature"><div class="feature-number">03</div><strong>We Come To You</strong><p>At home or at your workplace</p></div>
-  </div>
-</section>
-
 <section class="section light" id="services">
   <div class="container">
-    <div class="services-intro">
-      <div class="services-intro-copy">
-        <div class="eyebrow">Our Services</div>
-        <h2>Professional Car Detailing & Valeting,<br><span style="color:var(--gold)">Priced Honestly.</span></h2>
-        <p>From maintenance washes and interior detailing to machine polishing, paint correction and ceramic coating, every service is built around the condition of your vehicle and the result you want to achieve.</p>
-        <a class="btn btn-dark" href="#service-list">Explore Our Services&nbsp; →</a>
-      </div>
-      <div class="service-overview" aria-label="Our services at a glance">
-        <article class="service-summary">
-          <svg class="service-summary-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M8 24l3-9h18l3 9v9h-4v-4H12v4H8zM8 24h24M13 20h14M13 26h2m10 0h2M6 8h6M9 5v6M29 5h6M32 2v6"/></svg>
-          <div><h3>Valeting &amp; Interior Detailing</h3><p>For seats, carpets, spills or pet hair, explore our <a href="interior-deep-clean.html"><u>interior deep clean</u></a>. For cleaning inside and out, compare our <a href="mobile-full-valet.html"><u>mobile full valet</u></a>.</p></div>
-        </article>
-        <article class="service-summary">
-          <svg class="service-summary-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M5 31c9-4 21-4 30 0M7 35h26M20 5l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM31 4v6m-3-3h6"/></svg>
-          <div><h3>Paint Correction</h3><p>Swirls, light scratches or dull paintwork? Our <a href="paint-correction.html"><u>paint correction and machine polishing</u></a> can improve suitable paint, with realistic limits explained before work begins.</p></div>
-        </article>
-        <article class="service-summary">
-          <svg class="service-summary-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 4l13 5v10c0 8-6 13-13 17C13 32 7 27 7 19V9zM14 20l4 4 9-10"/></svg>
-          <div><h3>Ceramic Coating</h3><p>Explore <a href="/ceramic-coating"><u>ceramic coating</u></a> for suitably prepared paintwork, to enhance gloss and make ongoing cleaning easier. Preparation and protection are assessed together.</p></div>
-        </article>
-      </div>
+    <div class="section-intro center">
+      <div class="eyebrow">Our Services</div>
+      <h2>Choose the Right Mobile Detailing Service</h2>
+      <p>We come to your home or workplace with our own power and filtered water. Compare what each service is for, then see the full details before requesting a quote.</p>
     </div>
 
     <div class="services-grid" id="service-list">
@@ -416,7 +390,7 @@ input[type="file"]::file-selector-button {
         <div class="duration">60–75 Minutes</div>
         <p>Professional mobile maintenance detailing for vehicles that deserve more than a quick wash, helping keep your car clean, protected and looking its best between full details.</p>
         <ul>
-          <li>Detailed wheel cleaning</li><li>Tyre cleaning with dressing</li><li>Thorough exterior preparation</li><li>Safe professional hand wash</li><li>Safe paint drying process</li><li>Paint sealant / protection</li><li>Interior vacuum</li><li>Interior surface wipe-down</li><li>Interior glass cleaning</li>
+          <li>Safe exterior wash and wheel cleaning</li><li>Paint sealant or protection</li><li>Light interior vacuum and wipe-down</li>
         </ul>
         <div class="card-bottom"><a class="btn btn-dark" href="#contact">Request a Quote</a></div>
       </article>
@@ -428,9 +402,9 @@ input[type="file"]::file-selector-button {
         <div class="duration">Assessment Based</div>
         <p>Car seat and upholstery cleaning, carpet cleaning and leather care, with methods chosen to suit the material and condition of your interior.</p>
         <ul>
-          <li>Detailed interior vacuum</li><li>Fabric and carpet deep cleaning</li><li>Extraction where appropriate</li><li>Leather cleansing</li><li>Interior surface protection</li><li>Interior glass and hard-to-reach areas</li>
+          <li>Seats, carpets and interior surfaces</li><li>Extraction where appropriate</li><li>Leather, glass and hard-to-reach areas</li>
         </ul>
-        <p style="font-size:.75rem">Stains, pet hair and unpleasant odours are assessed individually. Complete stain or odour removal is not guaranteed; price and time depend on vehicle condition.</p>
+        
         <div class="card-bottom"><a class="btn btn-dark" href="interior-deep-clean.html">View Interior Deep Clean&nbsp; →</a></div>
       </article>
 
@@ -441,9 +415,9 @@ input[type="file"]::file-selector-button {
         <div class="duration">4–6+ Hours</div>
         <p>A comprehensive interior and exterior valet for vehicles needing a thorough reset, careful preparation and durable protection.</p>
         <ul>
-          <li>Detailed exterior wash and wheel cleaning</li><li>Paint decontamination where required</li><li>Paint sealant or protective finish</li><li>Interior vacuum and deep cleaning</li><li>Fabric, carpet and leather care</li><li>Interior and exterior glass</li>
+          <li>Exterior wash, wheels and protective finish</li><li>Interior vacuum and deeper cleaning</li><li>Fabric, carpet and leather care</li>
         </ul>
-        <p style="font-size:.75rem">Final price depends on vehicle size, condition, pet hair, staining and the level of decontamination required.</p>
+        
         <div class="card-bottom"><a class="btn" href="mobile-full-valet.html">View Full Valet&nbsp; →</a></div>
       </article>
 
@@ -454,9 +428,17 @@ input[type="file"]::file-selector-button {
         <div class="duration">6–8+ Hours</div>
         <p>Machine polishing to improve swirls, light scratches and dull paint where the condition allows. Deeper damage, missing paint and failing clear coat need a different approach.</p>
         <ul>
-          <li>Vehicle condition assessment</li><li>Thorough preparation & decontamination</li><li>Paint inspection and test area</li><li>Machine polishing</li><li>Swirl and light defect reduction where achievable</li><li>Final inspection and protection options</li>
+          <li>Paint inspection and preparation</li><li>Machine polishing where safe</li><li>Final inspection and protection options</li>
         </ul>
         <div class="card-bottom"><a class="btn" href="paint-correction.html">View Paint Correction&nbsp; →</a></div>
+      </article>
+      <article class="service-card">
+        <div class="eyebrow">Paint Protection</div>
+        <h3>Ceramic Coating</h3>
+        <div class="price">Quote on assessment</div>
+        <p>Protection for suitably prepared paintwork to enhance gloss and make routine washing easier. Preparation and coating are quoted for your vehicle.</p>
+        <ul><li>Paint condition assessment</li><li>Preparation and coating application</li><li>Care and maintenance advice</li></ul>
+        <div class="card-bottom"><a class="btn btn-dark" href="/ceramic-coating">View Ceramic Coating&nbsp; →</a></div>
       </article>
     </div>
   </div>
@@ -465,16 +447,14 @@ input[type="file"]::file-selector-button {
 <section class="protection" id="why-us">
   <div class="container protection-grid">
     <div class="protection-copy">
-      <div class="eyebrow">Long-Term Protection</div>
-      <h2>Ceramic Coating &<br><span style="color:var(--gold)">Paint Correction.</span></h2>
-      <p>Enhance gloss, refine the appearance of the paintwork and protect your vehicle with professional paint correction, ceramic coating and dedicated alloy wheel ceramic coating. Preparation comes first, with realistic expectations explained before work begins.</p>
-      <p><a href="alloy-wheel-ceramic-coating.html">Learn about alloy wheel ceramic coating&nbsp; →</a></p>
-      <a class="btn btn-outline" href="/ceramic-coating">Find Out More&nbsp; →</a>
+      <div class="eyebrow">Specialist Protection</div>
+      <h2>Alloy Wheel Ceramic Coating</h2>
+      <p>Protect properly prepared alloy wheels and make routine cleaning easier. We assess the condition of the wheels before recommending a coating.</p>
+      <a class="btn btn-outline" href="alloy-wheel-ceramic-coating.html">Explore Alloy Wheel Coating&nbsp; →</a>
     </div>
     <div class="protection-points">
-      <div class="protection-point"><div class="point-icon">01</div><div><strong>Improved Gloss</strong><span>Careful preparation and polishing can refine the appearance of suitable paintwork.</span></div></div>
-      <div class="protection-point"><div class="point-icon">02</div><div><strong>Long-Term Protection</strong><span>Ceramic protection can add a durable protective layer when correctly prepared and maintained.</span></div></div>
-      <div class="protection-point"><div class="point-icon">03</div><div><strong>Easier Maintenance</strong><span>A quality coating can help everyday dirt and water release more easily during safe washing.</span></div></div>
+      <div class="protection-point"><div class="point-icon">01</div><div><strong>Mobile Service</strong><span>We come to your home or workplace, subject to suitable conditions.</span></div></div>
+      <div class="protection-point"><div class="point-icon">02</div><div><strong>Realistic Advice</strong><span>We explain preparation, likely results and maintenance before you book.</span></div></div>
     </div>
   </div>
 </section>
